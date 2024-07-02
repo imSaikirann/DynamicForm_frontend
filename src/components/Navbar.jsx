@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <Box bg="black" p={["3","4"]} color="white"  fontFamily="Poppins">
             <Flex align="center" justify="space-between" wrap="wrap">
-               <Image w={["52px","65px"]}  h={["52px","65px"]}  src='logo.png'>
+               <Image w={["52px","65px"]}  h={["55px","65px"]}  src='logo.png'>
                </Image>
                 <IconButton
                     aria-label="Open Menu"
