@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Heading,  useDisclosure, IconButton, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay } from '@chakra-ui/react';
+import { Box, Flex, Heading,  useDisclosure, IconButton, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay ,Image} from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
@@ -7,10 +7,10 @@ export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
-        <Box bg="black" p={8} color="white">
+        <Box bg="black" p={["3","4"]} color="white"  fontFamily="Poppins">
             <Flex align="center" justify="space-between" wrap="wrap">
-                <Heading size="md">Dynamic Form Builder</Heading>
-
+               <Image w={["52px","65px"]}  h={["52px","65px"]}  src='logo.png'>
+               </Image>
                 <IconButton
                     aria-label="Open Menu"
                     icon={<HamburgerIcon />}

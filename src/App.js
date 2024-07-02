@@ -8,7 +8,8 @@ import Dashboard from './components/Dashboard';
 
 function App() {
   return (
-    <ChakraProvider>
+   
+     <ChakraProvider >
       <BrowserRouter>
         <Navbar />  {/* Corrected this line */}
         <Routes>
@@ -18,6 +19,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </ChakraProvider>
+   
   );
 }
 

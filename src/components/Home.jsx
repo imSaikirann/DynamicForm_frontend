@@ -10,14 +10,15 @@ export default function Home() {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      height={["80vh","60vh"]}
+      height={["60vh","60vh"]}
       textAlign="center"
       p={4}
+      fontFamily="Poppins"
     >
-      <Text fontSize={{ base: '28px', md: '54px' }} fontWeight="bold">
+      <Text fontSize={{ base: '26px', md: '54px' }}  fontWeight="bold">
         Dynamic Form Builder
       </Text>
-      <Text fontSize={{ base: '18px', md: '32px' }} mt={2}>
+      <Text fontSize={{ base: '16px', md: '32px' }} mt={2}>
         Interactive Form Creation and Submission Platform
       </Text>
 
