@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, Text } from '@chakra-ui/react';
-import { m } from 'framer-motion';
+
 import { Link } from 'react-router-dom';
 
 export default function Home() {

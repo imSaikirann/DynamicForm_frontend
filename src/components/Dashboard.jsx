@@ -10,7 +10,7 @@ export default function Dashboard() {
     { id: 3, name: 'Form 3', link: '/form3', responses: 7 },
   ];
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen,  onClose } = useDisclosure();
 
   return (
     <Box p={4}>
