@@ -41,6 +41,7 @@ export default function Navbar() {
                                 <Link to="/" onClick={onClose} style={{ margin: '10px 0' }}>Home</Link>
                                 <Link to="/createform" onClick={onClose} style={{ margin: '10px 0' }}>Create Form</Link>
                                 <Link to="/dashboard" onClick={onClose} style={{ margin: '10px 0' }}>Dashboard</Link>
+                                <Link to="/signup" onClick={onClose} style={{ margin: '10px 0' }}>Signup</Link>
                             </Flex>
                         </DrawerBody>
                     </DrawerContent>
@@ -55,6 +56,9 @@ export default function Navbar() {
                     </Box>
                     <Box mx={6}>
                         <Link to="/dashboard">Dashboard</Link>
+                    </Box>
+                    <Box mx={6}>
+                        <Link to="/signup">Signup</Link>
                     </Box>
                 </Flex>
             </Flex>
