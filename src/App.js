@@ -5,6 +5,7 @@ import Home from './components/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Createform from './components/Createform';
 import Dashboard from './components/Dashboard';
+import FormTools from './components/FormTools';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/createform" element={<Createform />} />
           <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/space" element={<FormTools/>} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

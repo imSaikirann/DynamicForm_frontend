@@ -57,13 +57,14 @@ export default function CreateForm() {
                   name="description"
                   placeholder="Enter description about form"
                   fontSize={["16px", "18px"]}
+                  h={["50px","200px"]}
                 />
                 {errors.description && touched.description ? (
                   <Text color="red.500" fontSize="sm">{errors.description}</Text>
                 ) : null}
               </FormControl>
 
-              <Link to="/createform">
+              <Link to="/space">
                 <Button
                   mt={["1rem","2rem"]}
                   w={["100%", "230px"]}
