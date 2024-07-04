@@ -1,16 +1,22 @@
 import React from 'react';
-import { Box, Flex, Heading,  useDisclosure, IconButton, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay ,Image} from '@chakra-ui/react';
+import { Box, Flex, Heading, useDisclosure, IconButton, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay, Image, Button } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { UserContext } from '../context/userContext'
+
 
 export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const { user,logout } = React.useContext(UserContext);
+    console.log(user)
+
+   
 
     return (
-        <Box bg="black" px={["5","40"]}  py={["3","4"]} color="white"  fontFamily="Poppins">
+        <Box bg="black" px={["5", "40"]} py={["3", "4"]} color="white" fontFamily="Poppins">
             <Flex align="center" justify="space-between" wrap="wrap">
-               <Image w={["52px","65px"]}  h={["55px","70px"]}  src='logo.png'>
-               </Image>
+                <Image w={["52px", "65px"]} h={["55px", "70px"]} src='logo.png'>
+                </Image>
                 <IconButton
                     aria-label="Open Menu"
                     icon={<HamburgerIcon />}
@@ -54,12 +60,26 @@ export default function Navbar() {
                     <Box mx={6}>
                         <Link to="/createform">Create Form</Link>
                     </Box>
-                    <Box mx={6}>
-                        <Link to="/dashboard">Dashboard</Link>
-                    </Box>
-                    <Box mx={6}>
-                        <Link to="/signup">Signup</Link>
-                    </Box>
+                    {user ?
+                        (
+
+                            <>
+                                <Box mx={6}>
+                                   <Button onClick={logout}>Logout</Button>
+                                </Box>
+                             
+                            </>) : (
+                           <>
+                           <Box mx={6}>
+                               <Link to="/dashboard">Dashboard</Link>
+                           </Box>
+                           <Box mx={6}>
+                               <Link to="/signup">Signup</Link>
+                           </Box>
+                       </>
+                        )
+                    }
+
                 </Flex>
             </Flex>
         </Box>
