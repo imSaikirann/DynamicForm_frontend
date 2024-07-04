@@ -3,6 +3,7 @@ import { Text, Box, Button, FormControl, FormLabel, Input, Textarea, VStack, Mod
 
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import Drag from './Drag'
 
 
 
@@ -64,6 +65,9 @@ export default function CreatenewForm() {
               </Form>
             )}
           </Formik>
+          <Box>
+            <Drag/>
+          </Box>
 
        
 
